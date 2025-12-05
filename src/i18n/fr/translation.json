@@ -1,0 +1,17 @@
+{
+  "nav-link": {
+    "about": "À propos",
+    "projects": "Projets",
+    "stack": "Compétences"
+  },
+
+  "a11y": {
+    "home": "Accueil",
+    "menu": "Menu",
+    "contact": "Contact",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "switchToEnglish": "Passer à l'anglais",
+    "switchToFrench": "Passer au français"
+  }
+}

@@ -1,15 +1,18 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
 import "./Sidebar.css";
 
 const Sidebar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useTranslation();
+
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   const sections = [
-    { id: "about", label: "About" },
-    { id: "projects", label: "Projects" },
-    { id: "stack", label: "Stack" },
+    { id: "about", label: t("nav-link.about") },
+    { id: "projects", label: t("nav-link.projects") },
+    { id: "stack", label: t("nav-link.stack") },
   ];
 
   const scrollToSection = (id: string) => {
@@ -29,7 +32,7 @@ const Sidebar = () => {
       <button
         className="sidebar-logo"
         onClick={() => scrollToSection("hero")}
-        aria-label="Retour à l'accueil"
+        aria-label={t("a11y.home")}
       >
         <span className="logo-text">Lb.</span>
       </button>
@@ -37,7 +40,7 @@ const Sidebar = () => {
       <button
         className={`hamburger ${isMenuOpen ? "active" : ""}`}
         onClick={toggleMenu}
-        aria-label="Menu"
+        aria-label={t("a11y.menu")}
         aria-expanded={isMenuOpen}
       >
         <span></span>
@@ -52,7 +55,7 @@ const Sidebar = () => {
               key={section.id}
               onClick={() => scrollToSection(section.id)}
               className="nav-link"
-              aria-label={`Aller à ${section.label}`}
+              aria-label={section.label}
             >
               {section.label}
             </button>
@@ -63,7 +66,7 @@ const Sidebar = () => {
           <a
             href="/contact"
             className="social-link contact-icon"
-            aria-label="Contact"
+            aria-label={t("a11y.contact")}
           >
             <FaEnvelope />
           </a>
@@ -72,7 +75,7 @@ const Sidebar = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="social-link"
-            aria-label="LinkedIn"
+            aria-label={t("a11y.linkedin")}
           >
             <FaLinkedin />
           </a>
@@ -81,7 +84,7 @@ const Sidebar = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="social-link"
-            aria-label="GitHub"
+            aria-label={t("a11y.github")}
           >
             <FaGithub />
           </a>

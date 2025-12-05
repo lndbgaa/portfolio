@@ -1,0 +1,17 @@
+{
+  "nav-link": {
+    "about": "About",
+    "projects": "Projects",
+    "stack": "Stack"
+  },
+
+  "a11y": {
+    "home": "Home",
+    "menu": "Menu",
+    "contact": "Contact",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "switchToEnglish": "Switch to English",
+    "switchToFrench": "Switch to French"
+  }
+}
