@@ -10,9 +10,9 @@ const Sidebar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   const sections = [
-    { id: "about", label: t("nav-link.about") },
-    { id: "projects", label: t("nav-link.projects") },
-    { id: "stack", label: t("nav-link.stack") },
+    { id: "about", label: t("sidebar.nav-link.about") },
+    { id: "projects", label: t("sidebar.nav-link.projects") },
+    { id: "stack", label: t("sidebar.nav-link.stack") },
   ];
 
   const scrollToSection = (id: string) => {

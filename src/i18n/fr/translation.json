@@ -1,8 +1,15 @@
 {
-  "nav-link": {
-    "about": "À propos",
-    "projects": "Projets",
-    "stack": "Compétences"
+  "sidebar": {
+    "nav-link": {
+      "about": "À propos",
+      "projects": "Projets",
+      "stack": "Compétences"
+    }
+  },
+
+  "hero": {
+    "role": "Développeuse",
+    "fullStack": "Full Stack"
   },
 
   "a11y": {

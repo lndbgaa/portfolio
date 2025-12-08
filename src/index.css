@@ -3,7 +3,23 @@
 :root {
   font-size: 62.5%;
 
+  --clr-bg-primary: #0d0d0d;
+  --clr-text: #ffffff;
   --clr-accent: #00d9ff;
+
+  --fs-xs: 1.2rem;
+  --fs-sm: 1.4rem;
+  --fs-base: 1.6rem;
+  --fs-medium: 1.8rem;
+  --fs-large: 2.4rem;
+  --fs-xlarge: 3.2rem;
+  --fs-xxlarge: 4.8rem;
+
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
 }
 
 *,
@@ -18,12 +34,8 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  overflow-x: hidden;
-}
-
 #root {
-  background-color: #0d0d0d;
+  background-color: var(--clr-bg-primary);
   min-height: 100vh;
 }
 
@@ -32,11 +44,12 @@ input,
 button,
 select,
 textarea {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.6rem;
-  color: #ffffff;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: var(--fs-base);
+  color: var(--clr-text);
 }
 
 a {
   text-decoration: none;
+  color: inherit;
 }

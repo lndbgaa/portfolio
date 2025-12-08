@@ -1,8 +1,15 @@
 {
-  "nav-link": {
-    "about": "About",
-    "projects": "Projects",
-    "stack": "Stack"
+  "sidebar": {
+    "nav-link": {
+      "about": "About",
+      "projects": "Projects",
+      "stack": "Stack"
+    }
+  },
+
+  "hero": {
+    "role": "Developer",
+    "fullStack": "Full Stack"
   },
 
   "a11y": {

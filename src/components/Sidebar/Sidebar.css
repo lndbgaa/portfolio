@@ -2,12 +2,12 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 18rem;
+  width: 16rem;
   height: 100vh;
+  padding: 5rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 7rem 0;
   z-index: 1000;
 }
 
@@ -19,8 +19,8 @@
 }
 
 .logo-text {
-  font-size: 3.2rem;
-  font-weight: 700;
+  font-size: var(--fs-xlarge);
+  font-weight: var(--fw-bold);
   letter-spacing: -0.5px;
   transition: color 0.3s ease;
 }
@@ -37,13 +37,13 @@
   margin-bottom: auto;
   display: flex;
   flex-direction: column;
-  gap: 3.5rem;
+  gap: 3rem;
 }
 
 .nav-link {
   position: relative;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.8);
+  font-weight: var(--fw-medium);
+  color: rgba(255, 255, 255, 0.7);
   letter-spacing: 0.25px;
   background: none;
   border: none;
@@ -84,7 +84,7 @@
 
 .social-link {
   color: rgba(255, 255, 255, 0.6);
-  font-size: 2.2rem;
+  font-size: var(--fs-large);
   transition: color 0.3s ease;
 }
 
@@ -131,13 +131,19 @@
   transform: translateY(-9px) rotate(-45deg);
 }
 
+@media (max-width: 1040px) {
+  .sidebar {
+    width: 14rem;
+  }
+}
+
 @media (max-width: 695px) {
   .sidebar {
     width: 100%;
-    height: 8rem;
+    height: 7rem;
+    padding: 0 2rem;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 2rem;
   }
 
   .sidebar.menu-open {
@@ -164,6 +170,7 @@
     backdrop-filter: blur(10px);
     opacity: 0;
     pointer-events: none;
+    transition: opacity 0.3s ease;
   }
 
   .sidebar-menu.active {
@@ -180,8 +187,8 @@
 
   .nav-link {
     width: 100%;
-    font-weight: 400;
-    font-size: 2rem;
+    font-weight: var(--fw-medium);
+    font-size: var(--fs-large);
     writing-mode: horizontal-tb;
   }
 
@@ -211,8 +218,26 @@
     flex-direction: row;
     gap: 2.5rem;
   }
+}
 
-  .social-link {
-    font-size: 2.5rem;
+@media (max-width: 480px) {
+  .sidebar {
+    padding: 0 1.5rem;
+  }
+
+  .logo-text {
+    font-size: var(--fs-large);
+  }
+
+  .sidebar-nav {
+    gap: 4rem;
+  }
+
+  .nav-link {
+    font-size: var(--fs-medium);
+  }
+
+  .sidebar-footer {
+    gap: 2rem;
   }
 }

@@ -1,0 +1,30 @@
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 16rem;
+  width: calc(100% - 16rem);
+  overflow-x: hidden;
+}
+
+@media (max-width: 1040px) {
+  .main-content {
+    margin-left: 14rem;
+    width: calc(100% - 14rem);
+  }
+}
+
+@media (max-width: 695px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .main-content {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 7rem;
+  }
+}
