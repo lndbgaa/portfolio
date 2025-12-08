@@ -10,6 +10,23 @@
   overflow-x: hidden;
 }
 
+.section-title {
+  position: relative;
+  margin-bottom: 3rem;
+  font-size: var(--fs-large);
+  font-weight: var(--fw-bold);
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1rem;
+  width: 6rem;
+  height: 0.4rem;
+  background-color: var(--clr-accent);
+}
+
 @media (max-width: 1040px) {
   .main-content {
     margin-left: 14rem;

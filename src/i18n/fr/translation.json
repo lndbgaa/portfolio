@@ -26,6 +26,26 @@
     "download_cv": "Télécharger mon CV"
   },
 
+  "projects": {
+    "title": "Projets",
+    "ecoride": {
+      "title": "EcoRide",
+      "description": "🚘 Une application fictive de covoiturage encourageant les trajets écoresponsables grâce au partage de déplacements."
+    },
+    "currency-converter": {
+      "title": "Convertisseur de devise",
+      "description": "💱 Une page web simple et intuitive permettant de convertir des devises en temps réel grâce à des taux de change mis à jour."
+    },
+    "weather-app": {
+      "title": "Application météo",
+      "description": "☀️ Page web fournissant des données météo par ville : température, indice UV, humidité et plus."
+    },
+    "carambar-app": {
+      "title": "Générateur de blagues Carambar",
+      "description": "😂 Page web permettant de générer et découvrir des blagues Carambar aléatoires."
+    }
+  },
+
   "a11y": {
     "home": "Accueil",
     "menu": "Menu",

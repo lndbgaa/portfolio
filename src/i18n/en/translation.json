@@ -26,6 +26,26 @@
     "download_cv": "Download CV"
   },
 
+  "projects": {
+    "title": "Projects",
+    "ecoride": {
+      "title": "EcoRide",
+      "description": "🚘 A fictional carpooling app encouraging eco-friendly travel through shared rides."
+    },
+    "currency-converter": {
+      "title": "Currency converter",
+      "description": "💱 A simple and intuitive web page that allows users to convert currencies in real time using up-to-date exchange rates."
+    },
+    "weather-app": {
+      "title": "Weather App",
+      "description": "☀️ Web page providing city-based weather data including temperature, UV Index, humidity, and more."
+    },
+    "carambar-app": {
+      "title": "Carambar Joke Generator",
+      "description": "😂 Web page for generating and discovering random French candy (Carambar) jokes."
+    }
+  },
+
   "a11y": {
     "home": "Home",
     "menu": "Menu",
