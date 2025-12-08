@@ -12,6 +12,20 @@
     "fullStack": "Full Stack"
   },
 
+  "about": {
+    "title": "About",
+    "profile": {
+      "intro": "Hi, I'm Linda, a Full Stack Developer based in France.",
+      "specialization": "I specialize in the JavaScript ecosystem, primarily working with React to create interactive user interfaces and Node.js to handle server-side logic. This dual expertise allows me to design complete solutions, with a strong focus on performance, user experience, and code quality.",
+      "career": "My journey, atypical and self-taught, led me to development—a field where I find daily motivation: solving technical problems, bringing ideas to life through code, and constantly exploring new approaches and methods."
+    },
+    "hobbies": {
+      "title": "When I'm Not Coding",
+      "description": "When I'm not in front of my editor, I closely follow the latest developments in technology, especially artificial intelligence, cybersecurity, and 3D printing. To recharge, I enjoy spending time in nature through hiking and savor quiet moments with reading (novels, biographies, personal development…)."
+    },
+    "download_cv": "Download CV"
+  },
+
   "a11y": {
     "home": "Home",
     "menu": "Menu",

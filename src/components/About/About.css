@@ -1,0 +1,147 @@
+.about {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 4rem 3rem;
+}
+
+.about-container {
+  max-width: 120rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.section-title {
+  position: relative;
+  margin-bottom: 3rem;
+  font-size: var(--fs-large);
+  font-weight: var(--fw-bold);
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1rem;
+  width: 6rem;
+  height: 0.4rem;
+  background-color: var(--clr-accent);
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about-description p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.about-description p:last-child {
+  margin-bottom: 0;
+}
+
+.subsection-title {
+  margin-bottom: 1rem;
+  font-size: var(--fs-medium);
+  font-weight: var(--fw-semibold);
+  color: var(--clr-accent);
+}
+
+.about-hobbies p {
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.about-cta {
+  margin-top: 1rem;
+}
+
+.btn-download {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  border: 2px solid var(--clr-accent);
+  border-radius: 4px;
+  font-weight: var(--fw-semibold);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-download:hover {
+  background-color: var(--clr-accent);
+  color: var(--clr-bg-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 217, 255, 0.3);
+}
+
+.about-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container {
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-illustration {
+  width: 100%;
+  height: auto;
+  display: block;
+  transform: scaleX(-1);
+}
+
+@media (max-width: 1040px) {
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 695px) {
+  .about {
+    padding: 3rem 2rem;
+  }
+
+  .section-title {
+    font-size: var(--fs-medium);
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about-text {
+    min-height: auto;
+  }
+
+  .about-description p,
+  .about-hobbies p {
+    font-size: var(--fs-sm);
+  }
+
+  .subsection-title {
+    font-size: var(--fs-base);
+  }
+
+  .image-container {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
