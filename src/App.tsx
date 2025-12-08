@@ -5,6 +5,7 @@ import Hero from "@/components/Hero/Hero";
 import LanguageToggle from "@/components/LanguageToggle/LanguageToggle";
 import Projects from "@/components/Projects/Projects";
 import Sidebar from "@/components/Sidebar/Sidebar";
+import Stack from "@/components/Stack/Stack";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Hero />
         <About />
         <Projects />
+        <Stack />
       </main>
     </div>
   );
