@@ -19,7 +19,6 @@
 }
 
 #about .text {
-  min-height: 50rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -61,35 +60,15 @@
   line-height: 1.8;
 }
 
+#about .bottom {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 #about .cta {
   margin-top: 1rem;
-}
-
-#about .github-activity {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-#about .github-activity::-webkit-scrollbar {
-  height: 6px;
-}
-
-#about .github-activity::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 3px;
-}
-
-#about .github-activity::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 3px;
-}
-
-#about .github-activity::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.3);
-}
-
-#about .github-activity .react-activity-calendar {
-  min-width: fit-content;
 }
 
 #about .github-activity text {
@@ -157,23 +136,16 @@
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
   #about .content {
     grid-template-columns: 1fr;
-  }
-
-  #about .text {
-    min-height: 37rem;
-    margin: 0 auto;
   }
 
   #about .terminal {
     order: -1;
     margin: 0 auto;
   }
-}
 
-@media (max-width: 1040px) {
   #about .github-activity {
     display: none;
   }
@@ -183,19 +155,10 @@
   #about .content {
     gap: 2rem;
   }
-
-  #about .cta {
-    display: flex;
-    justify-content: center;
-  }
 }
 
 @media (max-width: 460px) {
   #about {
     padding: 7rem 1.5rem 5rem;
-  }
-
-  #about .text {
-    min-height: 62rem;
   }
 }

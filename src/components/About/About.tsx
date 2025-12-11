@@ -26,29 +26,31 @@ const About = () => {
               <h3 className="subsection-title">{t("about.hobbies.title")}</h3>
               <p>{t("about.hobbies.description")}</p>
             </div>
-
-            <div className="github-activity">
-              <h3 className="subsection-title">{t("about.github.title")}</h3>
-              <GitHubCalendar
-                username="lndbgaa"
-                colorScheme="dark"
-                fontSize={12}
-                blockSize={11}
-                blockMargin={3}
-              />
-            </div>
-
-            <div className="cta">
-              <a href="/CV_Linda_Bougaa.pdf" download className="btn-download">
-                <span className="btn-content">
-                  <HiOutlineDownload className="btn-icon" />
-                  <span>{t("about.download_cv")}</span>
-                </span>
-              </a>
-            </div>
           </div>
 
           <AnimatedTerminal />
+        </div>
+
+        <div className="bottom">
+          <div className="github-activity">
+            <h3 className="subsection-title">{t("about.github.title")}</h3>
+            <GitHubCalendar
+              username="lndbgaa"
+              colorScheme="dark"
+              fontSize={12}
+              blockSize={11}
+              blockMargin={3}
+            />
+          </div>
+
+          <div className="cta">
+            <a href="/CV_Linda_Bougaa.pdf" download className="btn-download">
+              <span className="btn-content">
+                <HiOutlineDownload className="btn-icon" />
+                <span>{t("about.download_cv")}</span>
+              </span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
