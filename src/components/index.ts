@@ -1,0 +1,10 @@
+export { default as About } from "./About/About.tsx";
+export { default as AnimatedTerminal } from "./AnimatedTerminal/AnimatedTerminal.tsx";
+export { default as Contact } from "./Contact/Contact.tsx";
+export { default as Footer } from "./Footer/Footer.tsx";
+export { default as Hero } from "./Hero/Hero.tsx";
+export { default as LanguageToggle } from "./LanguageToggle/LanguageToggle.tsx";
+export { default as ProjectCard } from "./ProjectCard/ProjectCard.tsx";
+export { default as Projects } from "./Projects/Projects.tsx";
+export { default as Sidebar } from "./Sidebar/Sidebar.tsx";
+export { default as Stack } from "./Stack/Stack.tsx";

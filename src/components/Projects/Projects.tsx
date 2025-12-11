@@ -1,25 +1,46 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
-import { motion } from "framer-motion";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import { useWindowSize } from "usehooks-ts";
 
-import { projects } from "@/data/projects";
+import { ProjectCard } from "../../components";
+import { projects } from "../../data/projects.ts";
 
 import "./Projects.css";
 
+export type CardPosition = {
+  x: string;
+  scale: number;
+  zIndex: number;
+  isVisible: boolean;
+};
+
+export const MOBILE_BREAKPOINT = 768;
+
 const Projects = () => {
   const { t } = useTranslation();
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const { width: windowWidth = 1200 } = useWindowSize();
+
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+
+  const isMobile = windowWidth <= MOBILE_BREAKPOINT;
 
   const goToSlide = (index: number) => {
     setCurrentIndex(index);
   };
 
-  const getCardStyle = (index: number) => {
+  const goToPrev = () => {
+    setCurrentIndex((prev) => (prev === 0 ? projects.length - 1 : prev - 1));
+  };
+
+  const goToNext = () => {
+    setCurrentIndex((prev) => (prev === projects.length - 1 ? 0 : prev + 1));
+  };
+
+  const getCardPosition = (index: number): CardPosition => {
     const diff = index - currentIndex;
     const totalProjects = projects.length;
-    
-    // Handle wrapping for infinite loop effect
+
     let adjustedDiff = diff;
     if (diff > totalProjects / 2) adjustedDiff = diff - totalProjects;
     if (diff < -totalProjects / 2) adjustedDiff = diff + totalProjects;
@@ -33,16 +54,20 @@ const Projects = () => {
     let scale = 0.75;
     let zIndex = 0;
 
+    let offset = 70;
+    if (windowWidth <= 1040) {
+      offset = 60;
+    }
+
     if (isActive) {
-      x = 0;
       scale = 1;
       zIndex = 3;
     } else if (isPrev) {
-      x = -70;
+      x = -offset;
       scale = 0.8;
       zIndex = 1;
     } else if (isNext) {
-      x = 70;
+      x = offset;
       scale = 0.8;
       zIndex = 1;
     }
@@ -52,85 +77,68 @@ const Projects = () => {
 
   return (
     <section id="projects" className="projects">
-      <div className="projects-container">
+      <div className="container">
         <h2 className="section-title">{t("projects.title")}</h2>
 
-        <div className="carousel">
-          <div className="carousel-track">
-            {projects.map((project, index) => {
-              const { x, scale, zIndex, opacity, isVisible } = getCardStyle(index);
-              
-              if (!isVisible) return null;
-
-              return (
-                <motion.div
-                  key={project.id}
-                  className={`project-card ${index === currentIndex ? "active" : ""}`}
-                  animate={{
-                    x,
-                    scale,
-                    zIndex,
-                  }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 300,
-                    damping: 30,
-                  }}
-                  onClick={() => index !== currentIndex && goToSlide(index)}
-                >
-                  <div className="project-image">
-                    <img src={project.image} alt="" />
-                  </div>
-
-                  <div className="project-content">
-                    <h3 className="project-title">{t(project.titleKey)}</h3>
-                    <p className="project-description">
-                      {t(project.descriptionKey)}
-                    </p>
-
-                    <div className="project-technologies">
-                      {project.technologies.map((tech, techIndex) => (
-                        <span key={techIndex} className="tech-tag">
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-
-                    <div className="project-buttons">
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        className="project-btn github-btn"
-                      >
-                        <FaGithub />
-                        <span>GitHub</span>
-                      </a>
-                      <a
-                        href={project.demo}
-                        target="_blank"
-                        className="project-btn demo-btn"
-                      >
-                        <FaExternalLinkAlt />
-                        <span>Demo</span>
-                      </a>
-                    </div>
-                  </div>
-                </motion.div>
-              );
-            })}
+        {isMobile ? (
+          <div className="stack">
+            {projects.map((project, index) => (
+              <ProjectCard
+                key={project.id}
+                project={project}
+                index={index}
+                isCarousel={false}
+              />
+            ))}
           </div>
-        </div>
+        ) : (
+          <>
+            <div className="carousel">
+              <button
+                className="carousel-arrow carousel-arrow-prev"
+                onClick={goToPrev}
+                aria-label={t("projects.previousProject")}
+              >
+                <FiChevronLeft />
+              </button>
 
-        <div className="carousel-dots">
-          {projects.map((_, index) => (
-            <button
-              key={index}
-              className={`carousel-dot ${index === currentIndex ? "active" : ""}`}
-              onClick={() => goToSlide(index)}
-              aria-label={`Go to project ${index + 1}`}
-            />
-          ))}
-        </div>
+              <div className="carousel-track">
+                {projects.map((project, index) => (
+                  <ProjectCard
+                    key={project.id}
+                    project={project}
+                    index={index}
+                    isCarousel={true}
+                    isActive={index === currentIndex}
+                    getCardPosition={getCardPosition}
+                    onCardClick={goToSlide}
+                  />
+                ))}
+              </div>
+
+              <button
+                className="carousel-arrow carousel-arrow-next"
+                onClick={goToNext}
+                aria-label={t("projects.nextProject")}
+              >
+                <FiChevronRight />
+              </button>
+            </div>
+
+            <div className="carousel-dots">
+              {projects.map((_, index) => (
+                <button
+                  key={index}
+                  className={`carousel-dot ${
+                    index === currentIndex ? "active" : ""
+                  }`}
+                  onClick={() => goToSlide(index)}
+                  aria-label={t("projects.goToProject", { number: index + 1 })}
+                />
+              ))}
+            </div>
+          </>
+        )}
       </div>
     </section>
   );

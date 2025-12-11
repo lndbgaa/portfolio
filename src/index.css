@@ -3,9 +3,19 @@
 :root {
   font-size: 62.5%;
 
-  --clr-bg-primary: #0d0d0d;
+  --ff-montserrat: "Montserrat", -apple-system, BlinkMacSystemFont, sans-serif;
+  --ff-mono: "SF Mono", SFMono-Regular, Consolas, "Liberation Mono", Menlo,
+    monospace;
+
+  --clr-bg: #0f0f0f;
   --clr-text: #ffffff;
-  --clr-accent: #00d9ff;
+  --clr-accent-primary: #00d9ff;
+  --clr-accent-primary-dark: #00b8d4;
+  --clr-accent-secondary: #00ff88;
+  --clr-accent-secondary-dark: #00d970;
+  --clr-accent-gradient: linear-gradient(90deg, #00d9ff, #00ff88);
+  --clr-error: #ff6b6b;
+  --clr-success: #2ed573;
 
   --fs-xs: 1.2rem;
   --fs-sm: 1.4rem;
@@ -13,7 +23,7 @@
   --fs-medium: 1.8rem;
   --fs-large: 2.4rem;
   --fs-xlarge: 3.2rem;
-  --fs-xxlarge: 4.8rem;
+  --fs-xxlarge: 4.6rem;
 
   --fw-light: 300;
   --fw-regular: 400;
@@ -34,17 +44,16 @@ html {
   scroll-behavior: smooth;
 }
 
-#root {
-  background-color: var(--clr-bg-primary);
-  min-height: 100vh;
+html,
+body {
+  background-color: var(--clr-bg);
 }
 
 body,
 input,
 button,
-select,
 textarea {
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: var(--ff-montserrat);
   font-size: var(--fs-base);
   color: var(--clr-text);
 }

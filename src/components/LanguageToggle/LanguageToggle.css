@@ -1,7 +1,6 @@
 .language-toggle {
-  position: fixed;
+  position: sticky;
   top: 5rem;
-  right: 5rem;
   padding: 0.9rem 1.5rem;
   display: flex;
   align-items: center;
@@ -13,7 +12,6 @@
   border-radius: 2rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  z-index: 1000;
 }
 
 .language-toggle:hover {
@@ -30,18 +28,9 @@
   letter-spacing: 0.5px;
 }
 
-@media (max-width: 1040px) {
+@media (max-width: 768px) {
   .language-toggle {
-    right: 3rem;
-  }
-}
-
-@media (max-width: 695px) {
-  .language-toggle {
-    top: auto;
-    right: auto;
-    bottom: 2.5rem;
-    left: 2rem;
+    position: static;
     padding: 1rem 1.6rem;
     background: rgba(255, 255, 255, 0.15);
     border: 1px solid rgba(255, 255, 255, 0.35);
@@ -50,8 +39,6 @@
 
 @media (max-width: 480px) {
   .language-toggle {
-    bottom: 2rem;
-    left: 1.5rem;
     padding: 0.8rem 1.4rem;
   }
 

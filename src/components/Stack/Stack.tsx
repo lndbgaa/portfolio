@@ -1,8 +1,10 @@
+import { useTranslation } from "react-i18next";
 import {
   FaCode,
   FaCss3Alt,
   FaDatabase,
   FaDocker,
+  FaFigma,
   FaHtml5,
   FaJs,
   FaNodeJs,
@@ -15,10 +17,13 @@ import {
   SiPostman,
   SiTypescript,
 } from "react-icons/si";
+
 import "./Stack.css";
 
 const Stack = () => {
-  const stackTechnologies = [
+  const { t } = useTranslation();
+
+  const technologies = [
     { name: "HTML", icon: <FaHtml5 /> },
     { name: "CSS", icon: <FaCss3Alt /> },
     { name: "JavaScript", icon: <FaJs /> },
@@ -31,23 +36,25 @@ const Stack = () => {
   ];
 
   const tools = [
-    { name: "Docker", icon: <FaDocker /> },
-    { name: "Docker Compose", icon: <FaDocker /> },
     { name: "VS Code", icon: <FaCode /> },
+    { name: "Docker", icon: <FaDocker /> },
     { name: "Postman", icon: <SiPostman /> },
     { name: "DataGrip", icon: <FaDatabase /> },
+    { name: "Figma", icon: <FaFigma /> },
   ];
 
   return (
-    <section id="stack" className="stack">
-      <div className="stack-container">
-        <h2 className="section-title">Technologies</h2>
+    <section id="stack">
+      <div className="container">
+        <h2 className="section-title">{t("stack.title")}</h2>
 
-        <div className="stack-content">
-          <div className="stack-section">
-            <h3 className="subsection-title">Stack</h3>
+        <div className="content">
+          <div className="section">
+            <h3 className="subsection-title">
+              {t("stack.technologies.title")}
+            </h3>
             <div className="tech-grid">
-              {stackTechnologies.map((tech) => (
+              {technologies.map((tech) => (
                 <div key={tech.name} className="tech-card">
                   <div className="tech-icon">{tech.icon}</div>
                   <p className="tech-name">{tech.name}</p>
@@ -56,8 +63,8 @@ const Stack = () => {
             </div>
           </div>
 
-          <div className="stack-section">
-            <h3 className="subsection-title">Outils</h3>
+          <div className="section">
+            <h3 className="subsection-title">{t("stack.tools.title")}</h3>
             <div className="tech-grid">
               {tools.map((tool) => (
                 <div key={tool.name} className="tech-card">

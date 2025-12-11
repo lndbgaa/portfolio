@@ -1,23 +1,31 @@
-import "./App.css";
+import {
+  About,
+  Contact,
+  Footer,
+  Hero,
+  LanguageToggle,
+  Projects,
+  Sidebar,
+  Stack,
+} from "@/components";
 
-import About from "@/components/About/About";
-import Hero from "@/components/Hero/Hero";
-import LanguageToggle from "@/components/LanguageToggle/LanguageToggle";
-import Projects from "@/components/Projects/Projects";
-import Sidebar from "@/components/Sidebar/Sidebar";
-import Stack from "@/components/Stack/Stack";
+import "./App.css";
 
 function App() {
   return (
     <div className="app">
-      <LanguageToggle />
       <Sidebar />
       <main className="main-content">
         <Hero />
         <About />
         <Projects />
         <Stack />
+        <Contact />
+        <Footer />
       </main>
+      <aside className="settings-panel">
+        <LanguageToggle />
+      </aside>
     </div>
   );
 }

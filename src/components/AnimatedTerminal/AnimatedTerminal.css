@@ -1,0 +1,77 @@
+.terminal {
+  width: 100%;
+  min-height: 26rem;
+  max-width: 52rem;
+  height: auto;
+  padding: 3.5rem;
+  font-family: var(--ff-mono);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.terminal-line {
+  margin-bottom: 0.6rem;
+  display: flex;
+  flex-wrap: wrap;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  font-size: var(--fs-sm);
+  line-height: 1.8;
+}
+
+.terminal-line > span {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.terminal-command {
+  background: var(--clr-accent-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.terminal-output {
+  color: rgba(255, 255, 255, 0.6);
+  padding-left: 2rem;
+}
+
+.terminal-prompt {
+  margin-right: 1rem;
+  flex-shrink: 0;
+  background: var(--clr-accent-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.terminal-cursor {
+  animation: blink 1s step-end infinite;
+  flex-shrink: 0;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 1040px) {
+  .terminal {
+    max-width: 46rem;
+    padding: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .terminal {
+    min-height: 24rem;
+    padding: 2.5rem;
+  }
+}

@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+
+import { LanguageToggle } from "@/components";
 
 import "./Sidebar.css";
 
@@ -10,9 +12,10 @@ const Sidebar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   const sections = [
-    { id: "about", label: t("sidebar.nav-link.about") },
-    { id: "projects", label: t("sidebar.nav-link.projects") },
-    { id: "stack", label: t("sidebar.nav-link.stack") },
+    { id: "about", label: t("sidebar.about") },
+    { id: "projects", label: t("sidebar.projects") },
+    { id: "stack", label: t("sidebar.stack") },
+    { id: "contact", label: t("sidebar.contact") },
   ];
 
   const scrollToSection = (id: string) => {
@@ -32,7 +35,7 @@ const Sidebar = () => {
       <button
         className="sidebar-logo"
         onClick={() => scrollToSection("hero")}
-        aria-label={t("a11y.home")}
+        aria-label={t("sidebar.home")}
       >
         <span className="logo-text">Lb.</span>
       </button>
@@ -40,7 +43,7 @@ const Sidebar = () => {
       <button
         className={`hamburger ${isMenuOpen ? "active" : ""}`}
         onClick={toggleMenu}
-        aria-label={t("a11y.menu")}
+        aria-label={t("sidebar.menu")}
         aria-expanded={isMenuOpen}
       >
         <span></span>
@@ -63,31 +66,29 @@ const Sidebar = () => {
         </nav>
 
         <div className="sidebar-footer">
-          <a
-            href="/contact"
-            className="social-link contact-icon"
-            aria-label={t("a11y.contact")}
-          >
-            <FaEnvelope />
-          </a>
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="social-link"
-            aria-label={t("a11y.linkedin")}
-          >
-            <FaLinkedin />
-          </a>
-          <a
-            href="https://github.com/lndbgaa"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="social-link"
-            aria-label={t("a11y.github")}
-          >
-            <FaGithub />
-          </a>
+          <div className="sidebar-social-links">
+            <a
+              href="https://www.linkedin.com/in/linda-b-395216398/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-link"
+              aria-label={t("sidebar.linkedin")}
+            >
+              <FaLinkedin />
+            </a>
+            <a
+              href="https://github.com/lndbgaa"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-link"
+              aria-label={t("sidebar.github")}
+            >
+              <FaGithub />
+            </a>
+          </div>
+          <div className="sidebar-language-toggle">
+            <LanguageToggle />
+          </div>
         </div>
       </div>
     </aside>

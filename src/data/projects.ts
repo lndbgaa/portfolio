@@ -1,7 +1,8 @@
-interface Project {
+export interface Project {
   id: number;
   titleKey: string;
   image: string;
+  imageAltKey: string;
   descriptionKey: string;
   technologies: string[];
   github: string;
@@ -12,7 +13,8 @@ export const projects: Project[] = [
   {
     id: 1,
     titleKey: "projects.ecoride.title",
-    image: "../../public/images/projects/ecoride.png",
+    image: "/images/projects/ecoride.png",
+    imageAltKey: "projects.ecoride.imageAlt",
     descriptionKey: "projects.ecoride.description",
     technologies: [
       "React",
@@ -28,7 +30,8 @@ export const projects: Project[] = [
   {
     id: 2,
     titleKey: "projects.currency-converter.title",
-    image: "../../public/images/projects/currency-converter.png",
+    image: "images/projects/currency-converter.png",
+    imageAltKey: "projects.currency-converter.imageAlt",
     descriptionKey: "projects.currency-converter.description",
     technologies: ["React", "TypeScript", "Node.js", "Express.js"],
     github: "https://github.com/lndbgaa/currency-converter",
@@ -37,7 +40,8 @@ export const projects: Project[] = [
   {
     id: 3,
     titleKey: "projects.weather-app.title",
-    image: "../../public/images/projects/weather-app.png",
+    image: "/images/projects/weather-app.png",
+    imageAltKey: "projects.weather-app.imageAlt",
     descriptionKey: "projects.weather-app.description",
     technologies: ["React"],
     github: "https://github.com/lndbgaa/weather-app-v1",
@@ -46,7 +50,8 @@ export const projects: Project[] = [
   {
     id: 4,
     titleKey: "projects.carambar-app.title",
-    image: "../../public/images/projects/carambar-app.png",
+    image: "/images/projects/carambar-app.png",
+    imageAltKey: "projects.carambar-app.imageAlt",
     descriptionKey: "projects.carambar-app.description",
     technologies: ["React", "Node.js", "Express.js", "SQLite"],
     github: "https://github.com/lndbgaa/carambar-joke-generator",

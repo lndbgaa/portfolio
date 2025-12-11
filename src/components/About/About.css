@@ -1,130 +1,201 @@
-.about {
+#about {
   min-height: 100vh;
+  padding: 12rem 2rem 5rem;
   display: flex;
-  align-items: center;
-  padding: 4rem 3rem;
+  align-items: flex-start;
 }
 
-.about-container {
+#about .container {
+  width: 100%;
   max-width: 120rem;
   margin: 0 auto;
-  width: 100%;
 }
 
-.about-content {
+#about .content {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
+  align-items: start;
   gap: 4rem;
-  align-items: center;
 }
 
-.about-text {
+#about .text {
+  min-height: 50rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-.about-description p {
+#about .profile p {
   margin-bottom: 1rem;
-  line-height: 1.8;
   color: rgba(255, 255, 255, 0.7);
+  line-height: 1.8;
 }
 
-.about-description p:last-child {
+#about .profile p:last-child {
   margin-bottom: 0;
 }
 
-.subsection-title {
+#about .profile a {
+  color: var(--clr-accent-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.3s ease;
+}
+
+#about .profile a:hover {
+  color: var(--clr-text);
+}
+
+#about .subsection-title {
   margin-bottom: 1rem;
   font-size: var(--fs-medium);
   font-weight: var(--fw-semibold);
-  color: var(--clr-accent);
+  background: var(--clr-accent-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.about-hobbies p {
-  line-height: 1.8;
+#about .hobbies p {
   color: rgba(255, 255, 255, 0.7);
+  line-height: 1.8;
 }
 
-.about-cta {
+#about .cta {
   margin-top: 1rem;
 }
 
-.btn-download {
-  display: inline-block;
-  padding: 1rem 2.5rem;
-  border: 2px solid var(--clr-accent);
-  border-radius: 4px;
+#about .github-activity {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#about .github-activity::-webkit-scrollbar {
+  height: 6px;
+}
+
+#about .github-activity::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+}
+
+#about .github-activity::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+#about .github-activity::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+#about .github-activity .react-activity-calendar {
+  min-width: fit-content;
+}
+
+#about .github-activity text {
+  fill: rgba(255, 255, 255, 0.7) !important;
+}
+
+#about .btn-download {
+  position: relative;
+  display: inline-flex;
+  padding: 1.2rem 2.8rem;
   font-weight: var(--fw-semibold);
-  transition: all 0.3s ease;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 217, 255, 0.15) 0%,
+    rgba(0, 255, 136, 0.15) 100%
+  );
+  border-radius: 8px;
+  border: 1px solid rgba(0, 217, 255, 0.3);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.btn-download:hover {
-  background-color: var(--clr-accent);
-  color: var(--clr-bg-primary);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 217, 255, 0.3);
-}
-
-.about-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.image-container {
-  width: 100%;
-  max-width: 500px;
+#about .btn-content {
   position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
+  gap: 0.8rem;
+  background: var(--clr-accent-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.4s ease;
+  z-index: 1;
 }
 
-.about-illustration {
-  width: 100%;
-  height: auto;
-  display: block;
-  transform: scaleX(-1);
+#about .btn-icon {
+  font-size: var(--fs-medium);
+  color: var(--clr-accent-primary);
+  transition: transform 0.3s ease;
+}
+
+#about .btn-download:hover {
+  transform: translateY(-2px);
+  border-color: rgba(0, 217, 255, 0.5);
+  background: linear-gradient(
+    135deg,
+    rgba(0, 217, 255, 0.25) 0%,
+    rgba(0, 255, 136, 0.25) 100%
+  );
+}
+
+#about .btn-download:hover .btn-icon {
+  animation: bounce-down 0.6s ease infinite;
+}
+
+@keyframes bounce-down {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+}
+
+@media (max-width: 1200px) {
+  #about .content {
+    grid-template-columns: 1fr;
+  }
+
+  #about .text {
+    min-height: 37rem;
+    margin: 0 auto;
+  }
+
+  #about .terminal {
+    order: -1;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 1040px) {
-  .about-content {
-    grid-template-columns: 1fr;
+  #about .github-activity {
+    display: none;
   }
 }
 
-@media (max-width: 695px) {
-  .about {
-    padding: 3rem 2rem;
+@media (max-width: 768px) {
+  #about .content {
+    gap: 2rem;
   }
 
-  .section-title {
-    font-size: var(--fs-medium);
+  #about .cta {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 460px) {
+  #about {
+    padding: 7rem 1.5rem 5rem;
   }
 
-  .about-content {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-
-  .about-text {
-    min-height: auto;
-  }
-
-  .about-description p,
-  .about-hobbies p {
-    font-size: var(--fs-sm);
-  }
-
-  .subsection-title {
-    font-size: var(--fs-base);
-  }
-
-  .image-container {
-    max-width: 400px;
-    margin: 0 auto;
+  #about .text {
+    min-height: 62rem;
   }
 }

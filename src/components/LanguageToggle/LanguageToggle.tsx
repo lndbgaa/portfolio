@@ -6,8 +6,10 @@ import "./LanguageToggle.css";
 const LanguageToggle = () => {
   const { t, i18n } = useTranslation();
 
+  const isFrench = i18n.language === "fr";
+
   const toggleLanguage = () => {
-    const newLanguage = i18n.language === "fr" ? "en" : "fr";
+    const newLanguage = isFrench ? "en" : "fr";
     i18n.changeLanguage(newLanguage);
   };
 
@@ -16,13 +18,13 @@ const LanguageToggle = () => {
       className="language-toggle"
       onClick={toggleLanguage}
       aria-label={
-        i18n.language === "fr"
-          ? t("a11y.switchToEnglish")
-          : t("a11y.switchToFrench")
+        isFrench
+          ? t("languageToggle.switchToEnglish")
+          : t("languageToggle.switchToFrench")
       }
     >
       <FaGlobe className="globe-icon" />
-      <span className="lang-text">{i18n.language === "fr" ? "EN" : "FR"}</span>
+      <span className="lang-text">{isFrench ? "EN" : "FR"}</span>
     </button>
   );
 };

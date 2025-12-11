@@ -1,6 +1,8 @@
+import { GitHubCalendar } from "react-github-calendar";
 import { useTranslation } from "react-i18next";
+import { HiOutlineDownload } from "react-icons/hi";
 
-import DevIllustration from "@/assets/images/dev-illustration.svg?react";
+import { AnimatedTerminal } from "../../components";
 
 import "./About.css";
 
@@ -9,37 +11,44 @@ const About = () => {
 
   return (
     <section id="about" className="about">
-      <div className="about-container">
+      <div className="container">
         <h2 className="section-title">{t("about.title")}</h2>
 
-        <div className="about-content">
-          <div className="about-text">
-            <div className="about-description">
-              <p>
-                {t("about.profile.intro")}
-                <br />
-                {t("about.profile.specialization")}
-              </p>
-              <p>{t("about.profile.career")}</p>
+        <div className="content">
+          <div className="text">
+            <div className="profile">
+              <p>{t("about.profile.p1")}</p>
+              <p>{t("about.profile.p2")}</p>
+              <p dangerouslySetInnerHTML={{ __html: t("about.profile.p3") }} />
             </div>
 
-            <div className="about-hobbies">
+            <div className="hobbies">
               <h3 className="subsection-title">{t("about.hobbies.title")}</h3>
               <p>{t("about.hobbies.description")}</p>
             </div>
 
-            <div className="about-cta">
+            <div className="github-activity">
+              <h3 className="subsection-title">{t("about.github.title")}</h3>
+              <GitHubCalendar
+                username="lndbgaa"
+                colorScheme="dark"
+                fontSize={12}
+                blockSize={11}
+                blockMargin={3}
+              />
+            </div>
+
+            <div className="cta">
               <a href="/CV_Linda_Bougaa.pdf" download className="btn-download">
-                {t("about.download_cv")}
+                <span className="btn-content">
+                  <HiOutlineDownload className="btn-icon" />
+                  <span>{t("about.download_cv")}</span>
+                </span>
               </a>
             </div>
           </div>
 
-          <div className="about-image">
-            <div className="image-container">
-              <DevIllustration className="about-illustration" />
-            </div>
-          </div>
+          <AnimatedTerminal />
         </div>
       </div>
     </section>

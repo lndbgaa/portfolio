@@ -1,58 +1,113 @@
 {
   "sidebar": {
-    "nav-link": {
-      "about": "À propos",
-      "projects": "Projets",
-      "stack": "Compétences"
-    }
+    "home": "Accueil",
+    "menu": "Menu",
+    "about": "À propos",
+    "projects": "Projets",
+    "stack": "Stack",
+    "contact": "Contact",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  },
+
+  "languageToggle": {
+    "switchToEnglish": "Passer à l'anglais",
+    "switchToFrench": "Passer au français"
   },
 
   "hero": {
+    "greeting": "Bonjour, moi c'est",
     "role": "Développeuse",
-    "fullStack": "Full Stack"
+    "fullStack": "Full Stack",
+    "tagline": "Je transforme des idées en expériences web",
+    "cta": "Voir mes projets"
   },
 
   "about": {
     "title": "À propos",
     "profile": {
-      "intro": "Moi c'est Linda, Développeuse Full Stack basée en France.",
-      "specialization": "Je me spécialise dans l’écosystème JavaScript, en travaillant principalement avec React pour créer des interfaces utilisateur interactives et Node.js pour gérer la logique côté serveur. Cette double compétence me permet de concevoir des solutions complètes, en accordant une attention particulière à la performance, à l’expérience utilisateur et à la qualité du code.",
-      "career": "Mon parcours, atypique et autodidacte, m’a menée vers le développement, un domaine où je trouve ma motivation au quotidien : résoudre des problèmes techniques, concrétiser des idées à travers le code et explorer en permanence de nouvelles approches et méthodes de travail."
+      "p1": "Développeuse Full Stack basée en France, spécialisée dans l'écosystème JavaScript, je crée des applications complètes avec React et Node.js en accordant une attention particulière à la performance, à l'expérience utilisateur et à la qualité du code.",
+      "p2": "Résoudre des défis techniques, découvrir de nouveaux outils et concrétiser des idées par le code : c'est ce qui me motive au quotidien.",
+      "p3": "L'ensemble des outils que j'utilise est détaillé <a href=\"#stack\">ici</a>."
     },
     "hobbies": {
       "title": "En dehors du code",
-      "description": "Quand je ne suis pas devant mon éditeur, je suis attentivement les évolutions du numérique, notamment en intelligence artificielle, cybersécurité et impression 3D. Pour me ressourcer, je profite de la nature à travers la randonnée et savoure des moments de calme avec la lecture (romans, biographies, développement personnel…)."
+      "description": "Je m'intéresse de près à l'IA, la cybersécurité et l'impression 3D. Pour me ressourcer, vous me trouverez sur un sentier de randonnée ou plongée dans un bon livre."
     },
-    "download_cv": "Télécharger mon CV"
+    "download_cv": "Télécharger CV",
+    "github": {
+      "title": "Activité GitHub"
+    },
+    "terminal": {
+      "pwd": "pwd",
+      "path": "/home/linda/portfolio",
+      "whoami": "whoami",
+      "name": "linda-bougaa",
+      "echoStatus": "echo $STATUS",
+      "status": "Prête à créer des trucs cool ✨"
+    }
   },
 
   "projects": {
     "title": "Projets",
     "ecoride": {
       "title": "EcoRide",
-      "description": "🚘 Une application fictive de covoiturage encourageant les trajets écoresponsables grâce au partage de déplacements."
+      "description": "🚘 Une application fictive de covoiturage encourageant les trajets écoresponsables grâce au partage de déplacements.",
+      "imageAlt": "Capture d'écran du projet EcoRide"
     },
     "currency-converter": {
       "title": "Convertisseur de devise",
-      "description": "💱 Une page web simple et intuitive permettant de convertir des devises en temps réel grâce à des taux de change mis à jour."
+      "description": "💱 Une page web simple et intuitive permettant de convertir des devises en temps réel grâce à des taux de change mis à jour.",
+      "imageAlt": "Capture d'écran du projet Convertisseur de devise"
     },
     "weather-app": {
       "title": "Application météo",
-      "description": "☀️ Page web fournissant des données météo par ville : température, indice UV, humidité et plus."
+      "description": "☀️ Page web fournissant des données météo par ville : température, indice UV, humidité et bien plus encore.",
+      "imageAlt": "Capture d'écran du projet Application météo"
     },
     "carambar-app": {
       "title": "Générateur de blagues Carambar",
-      "description": "😂 Page web permettant de générer et découvrir des blagues Carambar aléatoires."
+      "description": "😂 Page web permettant de générer et découvrir des blagues Carambar aléatoires.",
+      "imageAlt": "Capture d'écran du projet Générateur de blagues Carambar"
+    },
+    "viewGithub": "Voir le code source sur GitHub pour {{project}}",
+    "viewDemo": "Voir la démo en ligne pour {{project}}",
+    "goToProject": "Aller au projet {{number}}",
+    "previousProject": "Projet précédent",
+    "nextProject": "Projet suivant"
+  },
+
+  "stack": {
+    "title": "Stack Technique",
+    "technologies": {
+      "title": "Technologies"
+    },
+    "tools": {
+      "title": "Outils"
     }
   },
 
-  "a11y": {
-    "home": "Accueil",
-    "menu": "Menu",
-    "contact": "Contact",
-    "linkedin": "LinkedIn",
-    "github": "GitHub",
-    "switchToEnglish": "Passer à l'anglais",
-    "switchToFrench": "Passer au français"
+  "contact": {
+    "title": "Contact",
+    "description": "Un projet en tête ou simplement envie de discuter ? N'hésitez pas à me contacter ! Je suis toujours ouverte aux nouvelles opportunités et idées.",
+    "form": {
+      "email": "Email",
+      "emailPlaceholder": "votre.email@exemple.com",
+      "message": "Message",
+      "messagePlaceholder": "Écrivez votre message ici...",
+      "submit": "Envoyer",
+      "successMessage": "Merci ! Votre message a bien été envoyé. Je vous répondrai très bientôt.",
+      "errorMessage": "Oups ! Une erreur s'est produite. Veuillez réessayer plus tard."
+    },
+    "errors": {
+      "emailRequired": "Veuillez entrer votre email",
+      "emailInvalid": "Veuillez entrer une adresse email valide",
+      "messageRequired": "Veuillez entrer votre message"
+    }
+  },
+
+  "footer": {
+    "rights": "Tous droits réservés.",
+    "builtWith": "Développé avec"
   }
 }

@@ -1,58 +1,113 @@
 {
   "sidebar": {
-    "nav-link": {
-      "about": "About",
-      "projects": "Projects",
-      "stack": "Stack"
-    }
+    "home": "Home",
+    "menu": "Menu",
+    "about": "About",
+    "projects": "Projects",
+    "stack": "Stack",
+    "contact": "Contact",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  },
+
+  "languageToggle": {
+    "switchToEnglish": "Switch to English",
+    "switchToFrench": "Switch to French"
   },
 
   "hero": {
+    "greeting": "Hey, I'm",
     "role": "Developer",
-    "fullStack": "Full Stack"
+    "fullStack": "Full Stack",
+    "tagline": "I turn ideas into web experiences",
+    "cta": "View my work"
   },
 
   "about": {
     "title": "About",
     "profile": {
-      "intro": "Hi, I'm Linda, a Full Stack Developer based in France.",
-      "specialization": "I specialize in the JavaScript ecosystem, primarily working with React to create interactive user interfaces and Node.js to handle server-side logic. This dual expertise allows me to design complete solutions, with a strong focus on performance, user experience, and code quality.",
-      "career": "My journey, atypical and self-taught, led me to development—a field where I find daily motivation: solving technical problems, bringing ideas to life through code, and constantly exploring new approaches and methods."
+      "p1": "France-based Full Stack Developer specializing in JavaScript. I build end-to-end applications with React and Node.js, prioritizing performance, user experience, and code quality.",
+      "p2": "Solving technical challenges, discovering new tools, and turning ideas into code—that's what drives me.",
+      "p3": "All the tools I use are detailed <a href=\"#stack\">here</a>."
     },
     "hobbies": {
       "title": "When I'm Not Coding",
-      "description": "When I'm not in front of my editor, I closely follow the latest developments in technology, especially artificial intelligence, cybersecurity, and 3D printing. To recharge, I enjoy spending time in nature through hiking and savor quiet moments with reading (novels, biographies, personal development…)."
+      "description": "I'm fascinated by AI, cybersecurity, and 3D printing. When I need to disconnect, you'll find me on a hiking trail or lost in a good book."
     },
-    "download_cv": "Download CV"
+    "download_cv": "Download CV",
+    "github": {
+      "title": "GitHub Activity"
+    },
+    "terminal": {
+      "pwd": "pwd",
+      "path": "/home/linda/portfolio",
+      "whoami": "whoami",
+      "name": "linda-bougaa",
+      "echoStatus": "echo $STATUS",
+      "status": "Ready to build awesome things ✨"
+    }
   },
 
   "projects": {
     "title": "Projects",
     "ecoride": {
       "title": "EcoRide",
-      "description": "🚘 A fictional carpooling app encouraging eco-friendly travel through shared rides."
+      "description": "🚘 A fictional carpooling app encouraging eco-friendly travel through shared rides.",
+      "imageAlt": "Screenshot of the EcoRide project"
     },
     "currency-converter": {
       "title": "Currency converter",
-      "description": "💱 A simple and intuitive web page that allows users to convert currencies in real time using up-to-date exchange rates."
+      "description": "💱 A simple and intuitive web page that allows users to convert currencies in real time using up-to-date exchange rates.",
+      "imageAlt": "Screenshot of the Currency Converter project"
     },
     "weather-app": {
       "title": "Weather App",
-      "description": "☀️ Web page providing city-based weather data including temperature, UV Index, humidity, and more."
+      "description": "☀️ Web page providing city-based weather data including temperature, UV Index, humidity, and more.",
+      "imageAlt": "Screenshot of the Weather App project"
     },
     "carambar-app": {
       "title": "Carambar Joke Generator",
-      "description": "😂 Web page for generating and discovering random French candy (Carambar) jokes."
+      "description": "😂 Web page for generating and discovering random French candy (Carambar) jokes.",
+      "imageAlt": "Screenshot of the Carambar Joke Generator project"
+    },
+    "viewGithub": "View source code on GitHub for {{project}}",
+    "viewDemo": "View live demo for {{project}}",
+    "goToProject": "Go to project {{number}}",
+    "previousProject": "Previous project",
+    "nextProject": "Next project"
+  },
+
+  "stack": {
+    "title": "Tech Stack",
+    "technologies": {
+      "title": "Technologies"
+    },
+    "tools": {
+      "title": "Tools"
     }
   },
 
-  "a11y": {
-    "home": "Home",
-    "menu": "Menu",
-    "contact": "Contact",
-    "linkedin": "LinkedIn",
-    "github": "GitHub",
-    "switchToEnglish": "Switch to English",
-    "switchToFrench": "Switch to French"
+  "contact": {
+    "title": "Contact",
+    "description": "Have a project in mind or just want to say hello? Feel free to reach out! I'm always open to discussing new opportunities and ideas.",
+    "form": {
+      "email": "Email",
+      "emailPlaceholder": "your.email@example.com",
+      "message": "Message",
+      "messagePlaceholder": "Write your message here...",
+      "submit": "Send Message",
+      "successMessage": "Thank you! Your message has been sent successfully. I'll get back to you soon.",
+      "errorMessage": "Oops! Something went wrong. Please try again later."
+    },
+    "errors": {
+      "emailRequired": "Please enter your email",
+      "emailInvalid": "Please enter a valid email address",
+      "messageRequired": "Please enter your message"
+    }
+  },
+
+  "footer": {
+    "rights": "All rights reserved.",
+    "builtWith": "Built with"
   }
 }
