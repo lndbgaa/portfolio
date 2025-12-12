@@ -60,15 +60,18 @@
   line-height: 1.8;
 }
 
+#about .terminal-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
 #about .bottom {
   margin-top: 4rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
-}
-
-#about .cta {
-  margin-top: 1rem;
 }
 
 #about .github-activity text {

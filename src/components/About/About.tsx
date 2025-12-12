@@ -28,7 +28,17 @@ const About = () => {
             </div>
           </div>
 
-          <AnimatedTerminal />
+          <div className="terminal-section">
+            <AnimatedTerminal />
+            <div className="cta">
+              <a href="/CV-Linda-Bougaa.pdf" download className="btn-download">
+                <span className="btn-content">
+                  <HiOutlineDownload className="btn-icon" />
+                  <span>{t("about.download_cv")}</span>
+                </span>
+              </a>
+            </div>
+          </div>
         </div>
 
         <div className="bottom">
@@ -41,15 +51,6 @@ const About = () => {
               blockSize={11}
               blockMargin={3}
             />
-          </div>
-
-          <div className="cta">
-            <a href="/CV_Linda_Bougaa.pdf" download className="btn-download">
-              <span className="btn-content">
-                <HiOutlineDownload className="btn-icon" />
-                <span>{t("about.download_cv")}</span>
-              </span>
-            </a>
           </div>
         </div>
       </div>
