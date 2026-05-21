@@ -2,13 +2,15 @@ import { useTranslation } from "react-i18next";
 import {
   FaCode,
   FaCss3Alt,
-  FaDatabase,
   FaDocker,
   FaFigma,
   FaHtml5,
   FaJs,
   FaNodeJs,
   FaReact,
+  FaSass,
+  FaGit,
+  FaGithub,
 } from "react-icons/fa";
 import {
   SiExpress,
@@ -16,6 +18,7 @@ import {
   SiMysql,
   SiPostman,
   SiTypescript,
+  SiVercel,
 } from "react-icons/si";
 
 import "./Stack.css";
@@ -26,6 +29,7 @@ const Stack = () => {
   const technologies = [
     { name: "HTML", icon: <FaHtml5 /> },
     { name: "CSS", icon: <FaCss3Alt /> },
+    { name: "Sass", icon: <FaSass /> },
     { name: "JavaScript", icon: <FaJs /> },
     { name: "TypeScript", icon: <SiTypescript /> },
     { name: "React", icon: <FaReact /> },
@@ -37,11 +41,14 @@ const Stack = () => {
 
   const tools = [
     { name: "VS Code", icon: <FaCode /> },
+    { name: "Git", icon: <FaGit /> },
+    { name: "GitHub", icon: <FaGithub /> },
     { name: "Docker", icon: <FaDocker /> },
     { name: "Postman", icon: <SiPostman /> },
-    { name: "DataGrip", icon: <FaDatabase /> },
     { name: "Figma", icon: <FaFigma /> },
+    { name: "Vercel", icon: <SiVercel /> },
   ];
+
 
   return (
     <section id="stack">
@@ -74,6 +81,8 @@ const Stack = () => {
               ))}
             </div>
           </div>
+
+      
         </div>
       </div>
     </section>

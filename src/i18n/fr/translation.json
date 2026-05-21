@@ -27,7 +27,7 @@
     "title": "À propos",
     "profile": {
       "p1": "Développeuse Full Stack basée en France, spécialisée dans l'écosystème JavaScript, je crée des applications complètes avec React et Node.js en accordant une attention particulière à la performance, à l'expérience utilisateur et à la qualité du code.",
-      "p2": "Résoudre des défis techniques, découvrir de nouveaux outils et concrétiser des idées par le code : c'est ce qui me motive au quotidien.",
+     "p2": "J'accorde autant d'importance à l'architecture qu'au rendu final : un code bien structuré, c'est la base d'un projet qui dure.",
       "p3": "L'ensemble des outils que j'utilise est détaillé <a href=\"#stack\">ici</a>."
     },
     "hobbies": {
@@ -44,7 +44,7 @@
       "whoami": "whoami",
       "name": "linda-bougaa",
       "echoStatus": "echo $STATUS",
-      "status": "Prête à créer des trucs cool ✨"
+      "status": "Ouverte aux opportunités ✨"
     }
   },
 
@@ -84,24 +84,27 @@
     },
     "tools": {
       "title": "Outils"
+    },
+    "other": {
+      "title": "Autres"
     }
   },
 
   "contact": {
     "title": "Contact",
-    "description": "Un projet en tête ou simplement envie de discuter ? N'hésitez pas à me contacter ! Je suis toujours ouverte aux nouvelles opportunités et idées.",
+    "description": "Une idée, un projet, un bug à résoudre ? Parlons-en.",
     "form": {
       "email": "Email",
       "emailPlaceholder": "votre.email@exemple.com",
       "message": "Message",
-      "messagePlaceholder": "Écrivez votre message ici...",
+      "messagePlaceholder": "Bonjour, j'aimerais...",
       "submit": "Envoyer",
       "successMessage": "Merci ! Votre message a bien été envoyé. Je vous répondrai très bientôt.",
-      "errorMessage": "Oups ! Une erreur s'est produite. Veuillez réessayer plus tard."
+      "errorMessage": "Oups ! Une erreur s'est produite. Veuillez réessayer ou me contacter directement à contact.lindabougaa@gmail.com"
     },
     "errors": {
       "emailRequired": "Veuillez entrer votre email",
-      "emailInvalid": "Veuillez entrer une adresse email valide",
+      "emailInvalid": "Email invalide",
       "messageRequired": "Veuillez entrer votre message"
     }
   },

@@ -21,7 +21,7 @@ const AnimatedTerminal = () => {
       { id: "whoami", type: "command", text: t("about.terminal.whoami") },
       { id: "name", type: "output", text: t("about.terminal.name") },
       { id: "echoStatus", type: "command", text: t("about.terminal.echoStatus") },
-      { id: "status", type: "output", text: t("about.terminal.status") },
+      { id: "status", type: "output", text: t("about.terminal.status") }
     ],
     [t]
   );

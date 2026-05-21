@@ -67,76 +67,12 @@
   gap: 2rem;
 }
 
-#about .bottom {
-  margin-top: 4rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+#about .github-activity {
+  margin-top: 2rem;
 }
 
 #about .github-activity text {
   fill: rgba(255, 255, 255, 0.7) !important;
-}
-
-#about .btn-download {
-  position: relative;
-  display: inline-flex;
-  padding: 1.2rem 2.8rem;
-  font-weight: var(--fw-semibold);
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 217, 255, 0.15) 0%,
-    rgba(0, 255, 136, 0.15) 100%
-  );
-  border-radius: 8px;
-  border: 1px solid rgba(0, 217, 255, 0.3);
-  overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-#about .btn-content {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  background: var(--clr-accent-gradient);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: all 0.4s ease;
-  z-index: 1;
-}
-
-#about .btn-icon {
-  font-size: var(--fs-medium);
-  color: var(--clr-accent-primary);
-  transition: transform 0.3s ease;
-}
-
-#about .btn-download:hover {
-  transform: translateY(-2px);
-  border-color: rgba(0, 217, 255, 0.5);
-  background: linear-gradient(
-    135deg,
-    rgba(0, 217, 255, 0.25) 0%,
-    rgba(0, 255, 136, 0.25) 100%
-  );
-}
-
-#about .btn-download:hover .btn-icon {
-  animation: bounce-down 0.6s ease infinite;
-}
-
-@keyframes bounce-down {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(3px);
-  }
 }
 
 @media (max-width: 1024px) {

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 import { LanguageToggle } from "@/components";
 
@@ -67,7 +67,7 @@ const Sidebar = () => {
 
         <div className="sidebar-footer">
           <div className="sidebar-social-links">
-            <a
+            {/* <a
               href="https://www.linkedin.com/in/linda-b-395216398/"
               target="_blank"
               rel="noopener noreferrer"
@@ -75,7 +75,7 @@ const Sidebar = () => {
               aria-label={t("sidebar.linkedin")}
             >
               <FaLinkedin />
-            </a>
+            </a> */}
             <a
               href="https://github.com/lndbgaa"
               target="_blank"

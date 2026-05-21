@@ -27,7 +27,7 @@
     "title": "About",
     "profile": {
       "p1": "France-based Full Stack Developer specializing in JavaScript. I build end-to-end applications with React and Node.js, prioritizing performance, user experience, and code quality.",
-      "p2": "Solving technical challenges, discovering new tools, and turning ideas into code—that's what drives me.",
+      "p2": "I care as much about architecture as I do about the final result: well-structured code is the foundation of a project that lasts.",
       "p3": "All the tools I use are detailed <a href=\"#stack\">here</a>."
     },
     "hobbies": {
@@ -44,7 +44,7 @@
       "whoami": "whoami",
       "name": "linda-bougaa",
       "echoStatus": "echo $STATUS",
-      "status": "Ready to build awesome things ✨"
+      "status": "Open to opportunities ✨"   
     }
   },
 
@@ -56,7 +56,7 @@
       "imageAlt": "Screenshot of the EcoRide project"
     },
     "currency-converter": {
-      "title": "Currency converter",
+      "title": "Currency Converter",
       "description": "💱 A simple and intuitive web page that allows users to convert currencies in real time using up-to-date exchange rates.",
       "imageAlt": "Screenshot of the Currency Converter project"
     },
@@ -84,27 +84,30 @@
     },
     "tools": {
       "title": "Tools"
+    },
+    "other": {
+      "title": "Other"
     }
   },
 
-  "contact": {
-    "title": "Contact",
-    "description": "Have a project in mind or just want to say hello? Feel free to reach out! I'm always open to discussing new opportunities and ideas.",
-    "form": {
-      "email": "Email",
-      "emailPlaceholder": "your.email@example.com",
-      "message": "Message",
-      "messagePlaceholder": "Write your message here...",
-      "submit": "Send Message",
-      "successMessage": "Thank you! Your message has been sent successfully. I'll get back to you soon.",
-      "errorMessage": "Oops! Something went wrong. Please try again later."
-    },
-    "errors": {
-      "emailRequired": "Please enter your email",
-      "emailInvalid": "Please enter a valid email address",
-      "messageRequired": "Please enter your message"
-    }
+"contact": {
+  "title": "Contact",
+  "description": "An idea, a project, a bug to fix? Let's talk.",
+  "form": {
+    "email": "Email",
+    "emailPlaceholder": "your.email@example.com",
+    "message": "Message",
+    "messagePlaceholder": "Hi, I'd like to...",
+    "submit": "Send",
+    "successMessage": "Thank you! Your message has been sent. I'll get back to you very soon.",
+    "errorMessage": "Oops! Something went wrong. Please try again or contact me directly at contact.lindabougaa@gmail.com."
   },
+  "errors": {
+    "emailRequired": "Please enter your email",
+    "emailInvalid": "Invalid email",
+    "messageRequired": "Please enter your message"
+  }
+},
 
   "footer": {
     "rights": "All rights reserved.",

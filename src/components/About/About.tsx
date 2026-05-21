@@ -1,6 +1,5 @@
 import { GitHubCalendar } from "react-github-calendar";
 import { useTranslation } from "react-i18next";
-import { HiOutlineDownload } from "react-icons/hi";
 
 import { AnimatedTerminal } from "../../components";
 
@@ -30,18 +29,10 @@ const About = () => {
 
           <div className="terminal-section">
             <AnimatedTerminal />
-            <div className="cta">
-              <a href="/CV-Linda-Bougaa.pdf" download className="btn-download">
-                <span className="btn-content">
-                  <HiOutlineDownload className="btn-icon" />
-                  <span>{t("about.download_cv")}</span>
-                </span>
-              </a>
-            </div>
           </div>
         </div>
 
-        <div className="bottom">
+       
           <div className="github-activity">
             <h3 className="subsection-title">{t("about.github.title")}</h3>
             <GitHubCalendar
@@ -51,7 +42,6 @@ const About = () => {
               blockSize={11}
               blockMargin={3}
             />
-          </div>
         </div>
       </div>
     </section>
