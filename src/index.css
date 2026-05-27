@@ -4,8 +4,7 @@
   font-size: 62.5%;
 
   --ff-montserrat: "Montserrat", -apple-system, BlinkMacSystemFont, sans-serif;
-  --ff-mono: "SF Mono", SFMono-Regular, Consolas, "Liberation Mono", Menlo,
-    monospace;
+  --ff-mono: "SF Mono", SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
 
   --clr-bg: #0f0f0f;
   --clr-text: #ffffff;
@@ -60,5 +59,4 @@ textarea {
 
 a {
   text-decoration: none;
-  color: inherit;
 }
